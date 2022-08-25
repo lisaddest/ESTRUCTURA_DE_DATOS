@@ -16,7 +16,11 @@ public class EVA1_6_NANO_TIME {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println(System.nanoTime());
+        long ini = System.nanoTime();
+        System.out.println(ini);
+        long fin = System.nanoTime();
+        long tiempo = fin - ini;
+        System.out.println(tiempo);
     }
     
 }
