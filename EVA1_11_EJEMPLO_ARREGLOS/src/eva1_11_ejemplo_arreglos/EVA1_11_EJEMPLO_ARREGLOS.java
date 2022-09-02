@@ -3,23 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package eva1_11_ejemplo_arreglos;
+package eva1.pkg11.ejemplos.arreglos;
 
 import java.util.Scanner;
-import sun.java2d.loops.CompositeType;
 
 /**
  *
  * @author Ana Paulina Villegas
  */
-public class EVA1_11_EJEMPLO_ARREGLOS {
+public class EVA1_11_EJEMPLOS_ARREGLOS {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        /*Pedir no. de grupo
+               /*Pedir no. de grupo
             pedir no. de estudiantes por grupo
             capturar calificaciones
         imprimir calificaciones
@@ -40,9 +39,16 @@ public class EVA1_11_EJEMPLO_ARREGLOS {
             System.out.println("Cuantos estudiantes hay en el grupo " + (i+1));
             int iEstu = input.nextInt();
            arregloCali[i] =new int[iEstu]; 
-           
+            for (int j = 0; j < arregloCali[i].length; j++) {
+                arregloCali[i][j]= input.nextInt();
+            }
+ 
         }
-        
+         for (int i = 0; i < arregloCali.length; i++) {
+             for (int j = 0; j < arregloCali[i].length; j++) {
+                 
+             }
+        }
         
         
        
@@ -52,4 +58,3 @@ public class EVA1_11_EJEMPLO_ARREGLOS {
         
     }
     
-
