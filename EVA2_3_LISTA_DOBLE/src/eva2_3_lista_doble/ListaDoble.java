@@ -7,7 +7,7 @@ package eva2_3_lista_doble;
 
 /**
  *
- * @author moviles
+ * @author APVT
  */
 public class ListaDoble {
     private Nodo inicio;
