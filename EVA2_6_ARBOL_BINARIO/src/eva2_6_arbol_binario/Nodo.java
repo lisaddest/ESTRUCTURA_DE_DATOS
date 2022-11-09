@@ -7,7 +7,7 @@ package eva2_6_arbol_binario;
 
 /**
  *
- * @author moviles
+ * @author APVT
  */
 public class Nodo {
     private int valor;
