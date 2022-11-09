@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author moviles
+ * @author APVT
  */
 public class EVA2_5_STACK {
 
