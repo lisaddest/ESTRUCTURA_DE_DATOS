@@ -7,7 +7,7 @@ package eva2_1_lista_simple;
 
 /**
  *
- * @author moviles
+ * @author APVT
  */
 public class Nodo {
     private int valor;
