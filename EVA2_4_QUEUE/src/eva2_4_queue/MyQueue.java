@@ -7,7 +7,7 @@ package eva2_4_queue;
 
 /**
  *
- * @author moviles
+ * @author APVT
  */
 public class MyQueue {
     private Nodo inicio;
