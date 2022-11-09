@@ -7,7 +7,7 @@ package eva2_1_lista_simple;
 
 /**
  *
- * @author moviles
+ * @author APVT
  */
 public class EVA2_1_LISTA_SIMPLE {
 
