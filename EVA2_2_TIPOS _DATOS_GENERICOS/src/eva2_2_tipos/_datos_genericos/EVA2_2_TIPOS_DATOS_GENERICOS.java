@@ -9,7 +9,7 @@ import java.util.LinkedList;
 
 /**
  *
- * @author moviles
+ * @author APVT
  */
 public class EVA2_2_TIPOS_DATOS_GENERICOS {
 
