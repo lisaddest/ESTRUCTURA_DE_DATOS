@@ -7,7 +7,7 @@ package eva2_5_stack;
 
 /**
  *
- * @author moviles
+ * @author APVT
  */
 public class MyStack {
     private Nodo inicio;
