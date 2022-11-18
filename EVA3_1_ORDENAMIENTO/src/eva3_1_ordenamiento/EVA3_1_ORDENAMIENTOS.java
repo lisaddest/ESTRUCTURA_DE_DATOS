@@ -18,19 +18,27 @@ public class EVA3_1_ORDENAMIENTOS {
         // TODO code application logic here
         int[] arregloDatos = new int[15];
         int[] arregloSel = new int[arregloDatos.length];
+       int[] arregloIns = new int[arregloDatos.length];
         System.out.println("ARREGLO ORIGINAL");
         llenar(arregloDatos);
         imprimir(arregloDatos);
         System.out.println("SELECTION SORT");
         copiar(arregloDatos, arregloSel);
-       // imprimir(arregloSel);
+       imprimir(arregloSel);
         double ini = System.nanoTime();
         selectionSort(arregloSel);
         double fin = System.nanoTime();
-       // imprimir(arregloSel);
+       imprimir(arregloSel);
+        System.out.println("Selection Sort = " + (fin - ini));  
+        
+          System.out.println("INSERTION SORT");
+        copiar(arregloDatos, arregloIns);
+       imprimir(arregloIns);
+        ini = System.nanoTime();
+        selectionSort(arregloIns);
+        fin = System.nanoTime();
+       imprimir(arregloIns);
         System.out.println("Selection Sort = " + (fin - ini));
-        
-        
     }
     //LLENAR ARREGLO
     public static void llenar(int[] arreglo){
@@ -39,26 +47,21 @@ public class EVA3_1_ORDENAMIENTOS {
             
         }   
     }
-    
     //IMPRIMIR ARREGLO
      public static void imprimir(int[] arreglo){
         for (int i = 0; i < arreglo.length; i++) {
            if(arreglo[i] < 10)
             System.out.print("[" + arreglo[i]+ "]");
             else
-           System.out.print("[" + arreglo[i]+ "]");
-            
+           System.out.print("[" + arreglo[i]+ "]");  
         }
          System.out.println("");       
- 
 } //COPIAR ARREGLO  
      public static void copiar(int[] arreglo, int[] copia){
          for (int i = 0; i < arreglo.length; i++) {
              copia[i] = arreglo[i];
-             
          }
      }
-     
      //SELECTION SORT O(n^2)
      //COMPARACIONES
      //INTERCAMBIOS (SWAP)
@@ -70,7 +73,6 @@ public class EVA3_1_ORDENAMIENTOS {
                  //Buscar el mas pequeño
              if(arreglo[min] > arreglo[j])
                  min = j;
-             
              }
              // SWAP INTERCAMBIAR 
              if(min != i){
@@ -80,5 +82,25 @@ public class EVA3_1_ORDENAMIENTOS {
              }
          }
          
+     }
+     
+     public static void insertionSort(int[] arreglo){
+         for (int i = 1; i < arreglo.length; i++) {
+             int temp= arreglo[i];                            //es lo que vamos a ordenar
+             int insP= i;
+             //BUSCAMOS EN QUE PUNTO DEBE DE QUEDAR TEMP
+             //ESA POSICION QUEDA ALMACENADA EN InsP
+             for (int prev = i-1; prev >=0; prev--) {         // se va a comparar
+                 if(arreglo[prev] > temp){
+                     //SWAP
+                 arreglo[insP] = arreglo[prev];
+                 insP--;
+                 } else{
+                     break;
+                 }
+             } 
+             arreglo[insP] = temp;
+             
+         }
      }
 }
