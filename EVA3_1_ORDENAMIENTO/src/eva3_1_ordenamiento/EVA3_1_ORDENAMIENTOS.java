@@ -7,7 +7,7 @@ package eva3_1_ordenamiento;
 
 /**
  *
- * @author APVT
+ * @author APVT 
  */
 public class EVA3_1_ORDENAMIENTOS {
 
@@ -84,7 +84,7 @@ public class EVA3_1_ORDENAMIENTOS {
          
      }
      
-     public static void insertionSort(int[] arreglo){
+     public  static void insertionSort(int[] arreglo){
          for (int i = 1; i < arreglo.length; i++) {
              int temp= arreglo[i];                            //es lo que vamos a ordenar
              int insP= i;
@@ -99,8 +99,22 @@ public class EVA3_1_ORDENAMIENTOS {
                      break;
                  }
              } 
-             arreglo[insP] = temp;
-             
+             arreglo[insP] = temp;   
          }
      }
+     //BUBBLE SORT NO LO VAMOS A PROGRAMAR
+     
+     //QUICKSORT
+     public static void quickSort(int[] arreglo){
+         quickSortRec(arreglo, 0, arreglo.length -1);
+     }
+     private static void quickSortRec(int[] arreglo, int ini, int fin){
+         //pivote --> posicion
+         //dos indices
+         //ind_gran -->> busca mayores al pivote
+         //ind_peq --> menores al pivote
+         //si se encuentran valores, se intercambian
+         //si se cruzan, se intercambia pivote con ind_peq
+         //quicksort a cada lado del pivote
+     }  
 }
