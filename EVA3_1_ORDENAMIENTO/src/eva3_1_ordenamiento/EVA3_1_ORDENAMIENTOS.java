@@ -126,12 +126,13 @@ public class EVA3_1_ORDENAMIENTOS {
        big = ini;
        small = fin;
        
+       
        while(big < small){      //los indices se cruzaron
        //mover los indices
-       while(arreglo[big] <= arreglo[pivote]) //buscar elementos mas grande que el pivote
+       while((arreglo[big] <= arreglo[pivote])&& (big < small)) //buscar elementos mas grande que el pivote
            big++;
         
-       while(arreglo[small] >= arreglo[pivote]) //buscar elementos mas pequeño que el pivote
+       while(arreglo[small] > arreglo[pivote]) //buscar elementos mas pequeño que el pivote
            small--;
       
        //VERIFICAMOS QUE NO HAYAN CRUZADO LOS INDICES
@@ -148,7 +149,9 @@ public class EVA3_1_ORDENAMIENTOS {
            pivote = small;
            
            //LLAMADA RECURSIVA 
-           quickSortRec(arreglo, ini, pivote -1);
-           quickSortRec(arreglo, pivote +1, fin);
+           if(pivote> ini)
+             quickSortRec(arreglo, ini, pivote -1);
+           if(pivote< fin)
+             quickSortRec(arreglo, pivote +1, fin);
      }  
 }
